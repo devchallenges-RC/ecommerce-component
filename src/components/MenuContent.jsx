@@ -1,20 +1,28 @@
-import React from 'react'
-
+import React from "react";
+import { menuItems } from "../data.js";
 
 export const MenuContent = () => {
-    return (
-        <div>
-           <div class="plate">
-            <img src="/images/plate__french-fries.png" alt="French Fries" class="plate" />
-            </div>
-            <div class="content">
-                <p class="menu-item">French Fries with Ketchup</p>
-                <p class="price">£2.23</p>
-                <button class="in-cart">
-                <img src="/images/check.svg" alt="Check" />
-                In Cart
-                </button>
-          </div> 
-        </div>
-    )
-}
+  return (
+    <ul className="menu">
+      {menuItems.map((item, key) => (
+        <li key={key}>
+          <div className="plate">
+            <img
+              src={`/images/${item.image}`}
+              alt={item.alt}
+              className="plate"
+            />
+          </div>
+          <div className="content">
+            <p className="menu-item">{item.name}</p>
+            <p className="price">£{item.price}</p>
+            <button className="in-cart">
+              <img src="/images/check.svg" alt="Check" />
+              Add to Cart
+            </button>
+          </div>
+        </li>
+      ))}
+    </ul>
+  );
+};
