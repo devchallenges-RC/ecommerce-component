@@ -1,10 +1,12 @@
 import './App.css';
-import { MenuContent } from './components/MenuContent';
+import { Menu } from './panel/Menu';
+import { Cart } from './panel/Cart';
 
 function App() {
   return (
-    <div className="App">
-      <MenuContent />
+    <div className="App wrapper menu">
+      <Menu />
+      <Cart />
     </div>
   );
 }
