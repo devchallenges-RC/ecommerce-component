@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import { menuItems } from "../data.js";
 import { MenuItem } from "./MenuItem.jsx";
 
